@@ -48,13 +48,13 @@
 
 		// removing characters that should be ignored
 		for( var character in ignoreCharacters ) {
-			shortDefinition = shortDefinition.replace( new RegExp( character.escapeRegExp(), 'g' ), '' );
+			shortDefinition = shortDefinition.replace( new RegExp( escapeRegExp(character), 'g' ), '' );
 		}
 		// splitting each definition
 		var defs = shortDefinition;
 		for( var attr in symbols ) {
 			var symbol = symbols[ attr ];
-			defs = defs.replace( new RegExp( symbol.escapeRegExp(), 'g' ), '\\'+symbol );
+			defs = defs.replace( new RegExp( escapeRegExp(symbol), 'g' ), '\\'+symbol );
 		}
 		defs = defs.split( '\\' );
 
@@ -81,6 +81,12 @@
 								+ (isSelfClosing ? '' : '</'+ containerName +'>');
 
 		return containerDefinition;
+	}
+	
+	// escape regular expression
+	function escapeRegExp( string ) {
+		string = string+"";
+		return string.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 	}
 
 }(jQuery));
