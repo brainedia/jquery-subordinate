@@ -8,3 +8,24 @@ That makes your code way much shorter and cleaner, when building complex DOM str
 
 ## Example ##
 [Here's a Demo](http://bl.ocks.org/brainedia/a837f5ef9f4921f126f2) 
+
+## How to use ##
+
+#### Short ####
+```
+$('body')
+  .subordinate( '<div id="parent"></div>' )
+  .subordinate( '<h1>Headline</h1>' );
+```
+
+#### Shorter: defining tags by CSS-like selectors ####
+```
+$('body')
+  .subordinate( 'div#parent' )
+  .subordinate( 'h1', "Another headline" );
+```
+
+#### Ultimate way: sequence of definitions ####
+```
+$('body').subordinate( 'div#parent > p.child > span', "I like!" );
+```
