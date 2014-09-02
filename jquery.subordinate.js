@@ -47,7 +47,8 @@
 		var selfClosingContainers = [ 'img', 'input', 'br', 'link', 'meta' ];
 
 		// removing characters that should be ignored
-		for( var character in ignoreCharacters ) {
+		for( var i in ignoreCharacters ) {
+			var character = ignoreCharacters[i];
 			shortDefinition = shortDefinition.replace( new RegExp( escapeRegExp(character), 'g' ), '' );
 		}
 		// splitting each definition
