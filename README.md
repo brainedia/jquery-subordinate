@@ -7,4 +7,4 @@ It appends an element but returns this new created jQuery object.
 That makes your code way much shorter and cleaner, when building complex DOM structures on-the-fly.
 
 ## Example ##
-[Here's a Demo](http://bl.ocks.org/brainedia/0d8161e1e5cfbddf17d0) 
+[Here's a Demo](http://bl.ocks.org/brainedia/a837f5ef9f4921f126f2) 
