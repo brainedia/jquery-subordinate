@@ -44,7 +44,7 @@
 		};
 		var ignoreCharacters = [ ')' ];
 		var isSelfClosing = false;
-		var selfClosingContainers = [ 'img', 'input', 'br', 'link', 'meta' ];
+		var selfClosingContainers = [ 'img', 'input', 'br', 'hr', 'link', 'meta' ];
 
 		// removing characters that should be ignored
 		for( var i in ignoreCharacters ) {
